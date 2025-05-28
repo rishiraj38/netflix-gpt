@@ -1,11 +1,10 @@
 import React from "react";
 import Body from "./components/Body";
-import { Analytics } from "@vercel/analytics/next";
-
+import { inject } from "@vercel/analytics";
+inject();
 function App() {
   return (
     <>
-      <Analytics />
       <Body />
     </>
   );
