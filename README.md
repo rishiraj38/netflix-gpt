@@ -1,6 +1,21 @@
 # Netflix GPT
  - Create vite Project
  - configure tailwind
+ - Header
+ - Routing of App
+ - Login Form
+ - SignUp From
+ - Form Validation
+ - Use Ref
+ - firebase setup
+ - Deploying our app to production
+ - Create SignUp User Account
+ - Implement Sign In user Api
+ - Created Redux Store with userSlice
+ - Implemented Sign out
+ - Update Profile
+ - BugFix: Sign up user displayName and profile picture update
+ - BugFix: if the user is not logged in Redirect /browse to Login Page and vice-versa
 
 # Features
  - Login/Sign Up
