@@ -12,3 +12,5 @@ export const API_OPTIONS = {
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZmIzODM3ODAxYjJhOGJmNTZhNmQ3NWMzZThhZDJlNyIsIm5iZiI6MTc0ODcxMTQzMi41NDU5OTk4LCJzdWIiOiI2ODNiMzgwOGU3NGNlYjVkOGJmMmFjMWIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.USfTg34Ws_6c_h-Vw3RIHsuWE7DcFSoSs_O6WESOqew",
   },
 };
+export const IMG_CDN =
+  "https://image.tmdb.org/t/p/w500";
