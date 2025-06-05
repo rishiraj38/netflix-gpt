@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import Header from "./Header";
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
 import MainContainer from "./MainContainer";
@@ -8,27 +8,21 @@ import useUpcomingMovies from "../hooks/useUpcomingMovies";
 import useTopRatedMovies from "../hooks/useTopRatedMovies";
 
 const Browse = () => {
-  useNowPlayingMovies();
-  usePopularMovies();
-  useTopRatedMovies();
-  useUpcomingMovies();
+  const [errorOccurred, setErrorOccurred] = useState(false);
 
-  useEffect(() => {
-    const handleError = (event) => {
+  const handleError = () => {
+    if (!errorOccurred) {
       alert(
         "Failed to load movies. Please turn on your VPN and try again. Sorry for the inconvenience."
       );
-      console.error("Browse Page Error:", event.error || event.reason);
-    };
+      setErrorOccurred(true);
+    }
+  };
 
-    window.addEventListener("error", handleError);
-    window.addEventListener("unhandledrejection", handleError);
-
-    return () => {
-      window.removeEventListener("error", handleError);
-      window.removeEventListener("unhandledrejection", handleError);
-    };
-  }, []);
+  useNowPlayingMovies(handleError);
+  usePopularMovies(handleError);
+  useTopRatedMovies(handleError);
+  useUpcomingMovies(handleError);
 
   return (
     <div>
